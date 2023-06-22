@@ -32,6 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: cp config/firebase.prod.config.ts config/firebase.config.ts
+      - uses: actions/setup-node@v3
+        node-version: '18'
+      - run: npm install
       - run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
