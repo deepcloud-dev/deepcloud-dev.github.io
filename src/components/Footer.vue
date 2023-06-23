@@ -1,3 +1,38 @@
+<script setup>
+import { ref } from "vue";
+
+defineProps({
+  lang: String,
+});
+
+const date = ref(new Date().getFullYear());
+
+const text = ref({
+  title: {
+    pt: "Vamos manter contato!",
+    en: "Let's keep in touch!",
+    es: "¡Mantengámonos en contacto!",
+  },
+  subtitle: {
+    pt: "Siga-nos nas mídias sociais",
+    en: "Follow us on the social media",
+    es: "Síguenos en las redes sociales",
+  },
+  links: {
+    title: {
+      pt: "Links Úteis",
+      en: "Useful links",
+      es: "Enlaces útiles",
+    },
+    contact: {
+      pt: "Contate-nos",
+      en: "Contact Us",
+      es: "Contacta con nosotros",
+    },
+  },
+});
+</script>
+
 <template>
   <footer class="relative bg-blueGray-200 pt-8 pb-6">
     <div
@@ -21,9 +56,9 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap text-center lg:text-left">
         <div class="w-full lg:w-6/12 px-4">
-          <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+          <h4 class="text-3xl font-semibold">{{ text.title[lang] }}</h4>
           <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
-            Follow us on the social medias
+            {{ text.subtitle[lang] }}
           </h5>
           <div class="mt-6 lg:mb-0 mb-6">
             <a
@@ -61,7 +96,7 @@
               <span
                 class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"
               >
-                Useful Links
+                {{ text.links.title[lang] }}
               </span>
               <ul class="list-unstyled">
                 <li>
@@ -82,28 +117,28 @@
                     Github
                   </a>
                 </li>
-                <li>
-                  <a
-                    class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                    href="#terms"
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                    href="#privacy"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
+                <!--                <li>-->
+                <!--                  <a-->
+                <!--                    class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"-->
+                <!--                    href="#terms"-->
+                <!--                  >-->
+                <!--                    Terms & Conditions-->
+                <!--                  </a>-->
+                <!--                </li>-->
+                <!--                <li>-->
+                <!--                  <a-->
+                <!--                    class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"-->
+                <!--                    href="#privacy"-->
+                <!--                  >-->
+                <!--                    Privacy Policy-->
+                <!--                  </a>-->
+                <!--                </li>-->
                 <li>
                   <a
                     class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                     href="mailto:deepcloud.dev@gmail.com"
                   >
-                    Contact Us
+                    {{ text.links.contact[lang] }}
                   </a>
                 </li>
               </ul>
@@ -124,12 +159,3 @@
     </div>
   </footer>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      date: new Date().getFullYear(),
-    };
-  },
-};
-</script>

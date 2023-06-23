@@ -2,11 +2,132 @@
 import Navbar from "@/components/LandingNavbar.vue";
 import FooterComponent from "@/components/Footer.vue";
 import Email from "@/components/Email.vue";
+import { ref } from "vue";
+
+let navLang = (navigator.language || navigator.userLanguage).split("-")[0];
+if (!["pt", "es", "en"].includes(navLang)) {
+  navLang = "en";
+}
+
+navLang = "pt";
+
+const lang = ref(navLang);
+const text = ref({
+  hero: {
+    title: {
+      pt: "Sua jornada de nuvem começa com a Deep Cloud",
+      en: "Your cloud journey begins with Deep Cloud",
+      es: "Tu viaje en la nube comienza con Deep Cloud",
+    },
+    text: {
+      pt: "Transforme sua visão em uma arquitetura em nuvem perfeita com facilidade, enquanto lidamos com as complexidades. Sua história começa aqui.",
+      en: "Transform your vision into a perfect cloud architecture with ease, while we handle the complexities. Your story starts here.",
+      es: "Transforma tu visión en una arquitectura en la nube perfecta con facilidad, mientras nosotros nos encargamos de las complejidades. Tu historia comienza aquí.",
+    },
+  },
+  card: {
+    one: {
+      title: {
+        pt: "Criação de arquiteturas em nuvem simplificada",
+        en: "Simplified cloud architecture creation",
+        es: "Creación simplificada de arquitecturas en la nube",
+      },
+      text: {
+        pt: "Barreiras técnicas são eliminadas e a configuração de infraestrutura se torna acessível a todos. A plataforma intuitiva permite a criação de arquiteturas personalizadas com apenas alguns cliques, sem necessidade de conhecimentos especializados.",
+        en: "Technical barriers are eliminated, and infrastructure configuration becomes accessible to everyone. The intuitive platform enables the creation of customized architectures with just a few clicks, without the need for specialized knowledge.",
+        es: "Se eliminan las barreras técnicas y la configuración de infraestructura se vuelve accesible para todos. La plataforma intuitiva permite la creación de arquitecturas personalizadas con solo unos pocos clics, sin necesidad de conocimientos especializados.",
+      },
+    },
+    two: {
+      title: {
+        pt: "Melhoria na eficiência e segurança ",
+        en: "Improved efficiency and security",
+        es: "Mejora en eficiencia y seguridad",
+      },
+      text: {
+        pt: "Garantia de que todas as arquiteturas criadas na Deep Cloud sejam otimizadas em termos de desempenho, segurança e escalabilidade. Backups, firewalls, redes e recursos de dimensionamento automático são configurados automaticamente, seguindo as melhores práticas do mercado.",
+        en: "Ensuring that all architectures created in Deep Cloud are optimized in terms of performance, security, and scalability. Backups, firewalls, networks, and auto-scaling resources are configured automatically, following industry best practices.",
+        es: "Garantizamos que todas las arquitecturas creadas en Deep Cloud estén optimizadas en términos de rendimiento, seguridad y escalabilidad. Los respaldos, firewalls, redes y recursos de escalado automático se configuran automáticamente, siguiendo las mejores prácticas del mercado.",
+      },
+    },
+    three: {
+      title: {
+        pt: "Promoção de escalabilidade e flexibilidade",
+        en: "Promotion of scalability and flexibility",
+        es: "Promoción de escalabilidad y flexibilidad",
+      },
+      text: {
+        pt: "A solução se adapta às constantes necessidades dos negócios, fornecendo uma base sólida que pode acompanhar o crescimento e a demanda. Com a Deep Cloud, é possível expandir o negócio de forma ágil e eficiente.",
+        en: "The solution adapts to the ever-changing needs of businesses, providing a solid foundation that can keep up with growth and demand. With Deep Cloud, it is possible to expand the business swiftly and efficiently.",
+        es: "La solución se adapta a las necesidades cambiantes de los negocios, brindando una base sólida que puede acompañar el crecimiento y la demanda. Con Deep Cloud, es posible expandir el negocio de manera ágil y eficiente.",
+      },
+    },
+  },
+  section: {
+    one: {
+      title: {
+        pt: "Liberdade para construir arquiteturas em nuvem personalizadas, sem barreiras técnicas",
+        en: "Freedom to build custom cloud architectures without technical barriers",
+        es: "Libertad para construir arquitecturas de nube personalizadas sin barreras técnicas",
+      },
+      text: {
+        pt:
+          "A plataforma Deep Cloud capacita empreendedores e startups a criarem suas infraestruturas em nuvem de forma rápida e eficiente. " +
+          "<br><br>" +
+          "A eliminação das barreiras técnicas e a simplificação do processo de configuração permitem que arquiteturas personalizadas sejam construídas por qualquer pessoa, sem a necessidade de conhecimentos especializados em infraestrutura e segurança.",
+        en:
+          "The Deep Cloud platform empowers entrepreneurs and startups to quickly and efficiently build their cloud infrastructures." +
+          "<br><br>" +
+          "Eliminating technical barriers and simplifying the configuration process allows custom architectures to be built by anyone, without the need for specialized infrastructure and security knowledge.",
+        es:
+          "La plataforma Deep Cloud empodera a los empresarios y empresas emergentes para que construyan de manera rápida y eficiente sus infraestructuras en la nube" +
+          "<br><br>" +
+          "La eliminación de las barreras técnicas y la simplificación del proceso de configuración permiten que cualquier persona construya arquitecturas personalizadas, sin necesidad de infraestructura especializada ni conocimientos de seguridad",
+      },
+      image: {
+        title: {
+          pt: "Nossa visão",
+          en: "Our vision",
+          es: "Nuestra visión",
+        },
+        text: {
+          pt: "Nossa visão é revolucionar a forma como as empresas constroem suas arquiteturas em nuvem, oferecendo uma plataforma unificada e intuitiva que simplifica e otimiza o processo de configuração",
+          en: "Our vision is to revolutionize the way companies build their cloud architectures by offering a unified and intuitive platform that simplifies and streamlines the configuration process",
+          es: "Nuestra visión es revolucionar la forma en que las empresas construyen sus arquitecturas en la nube ofreciendo una plataforma unificada e intuitiva que simplifica y agiliza el proceso de configuración",
+        },
+      },
+    },
+    two: {
+      title: {
+        pt: "Uma ideia inovadora e em crescimento",
+        en: "An innovative and growing idea",
+        es: "Una idea innovadora y en crecimiento",
+      },
+      text: {
+        pt: "Através da Deep Cloud, é possível selecionar provedores de nuvem desejados, como AWS e GCP, e configurar arquiteturas de forma intuitiva",
+        en: "Through the Deep Cloud, it is possible to select desired cloud providers, such as AWS and GCP, and intuitively configure architectures",
+        es: "A través de Deep Cloud, es posible seleccionar los proveedores de nube deseados, como AWS y GCP, y configurar arquitecturas de manera intuitiva",
+      },
+    },
+    three: {
+      title: {
+        pt: "Desafie os limites da inovação em nuvem",
+        en: "Challenge the boundaries of cloud innovation",
+        es: "Desafíe los límites de la innovación en la nube",
+      },
+      text: {
+        pt: "Descubra como a Deep Cloud pode transformar sua visão em uma arquitetura perfeita, eliminando barreiras técnicas, simplificando a configuração e oferecendo eficiência, segurança e escalabilidade. Conheça a chave para impulsionar seu negócio",
+        en: "Discover how the Deep Cloud can transform your vision into a seamless architecture, removing technical barriers, simplifying configuration, and delivering efficiency, security, and scalability. Know the key to boost your business",
+        es: "Descubra cómo Deep Cloud puede transformar su visión en una arquitectura perfecta, eliminando barreras técnicas, simplificando la configuración y brindando eficiencia, seguridad y escalabilidad. Conoce la clave para impulsar tu negocio",
+      },
+    },
+  },
+});
 </script>
 
 <template>
   <div>
-    <navbar />
+    <navbar :lang="lang" />
     <main>
       <div
         class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
@@ -19,15 +140,13 @@ import Email from "@/components/Email.vue";
         </div>
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+            <div class="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
               <div class="pr-12">
                 <h1 class="text-white font-semibold text-5xl">
-                  Your story starts with us.
+                  {{ text.hero.title[lang] }}
                 </h1>
                 <p class="mt-4 text-lg text-blueGray-200">
-                  This is a simple example of a Landing Page you can build using
-                  Vue Notus. It features multiple CSS components based on the
-                  Tailwind CSS design system.
+                  {{ text.hero.text[lang] }}
                 </p>
               </div>
             </div>
@@ -62,14 +181,15 @@ import Email from "@/components/Email.vue";
               >
                 <div class="px-4 py-5 flex-auto">
                   <div
-                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
                   >
                     <i class="fas fa-award"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Awarded Agency</h6>
+                  <h6 class="text-xl font-semibold">
+                    {{ text.card.one.title[lang] }}
+                  </h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    Divide details about your product or agency work into parts.
-                    A paragraph describing a feature will be enough.
+                    {{ text.card.one.text[lang] }}
                   </p>
                 </div>
               </div>
@@ -85,10 +205,11 @@ import Email from "@/components/Email.vue";
                   >
                     <i class="fas fa-retweet"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Free Revisions</h6>
+                  <h6 class="text-xl font-semibold">
+                    {{ text.card.two.title[lang] }}
+                  </h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    Keep you user engaged by providing meaningful information.
-                    Remember that by this time, the user is curious.
+                    {{ text.card.two.text[lang] }}
                   </p>
                 </div>
               </div>
@@ -104,10 +225,11 @@ import Email from "@/components/Email.vue";
                   >
                     <i class="fas fa-fingerprint"></i>
                   </div>
-                  <h6 class="text-xl font-semibold">Verified Company</h6>
+                  <h6 class="text-xl font-semibold">
+                    {{ text.card.three.title[lang] }}
+                  </h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    Write a few lines about each one. A paragraph describing a
-                    feature will be enough. Keep you user engaged!
+                    {{ text.card.three.text[lang] }}
                   </p>
                 </div>
               </div>
@@ -122,30 +244,17 @@ import Email from "@/components/Email.vue";
                 <i class="fas fa-user-friends text-xl"></i>
               </div>
               <h3 class="text-3xl mb-2 font-semibold leading-normal">
-                Working with us is a pleasure
+                {{ text.section.one.title[lang] }}
               </h3>
               <p
                 class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
-              >
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-              </p>
-              <p
-                class="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600"
-              >
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
-              </p>
-              <router-link to="/" class="font-bold text-blueGray-700 mt-8">
-                Check Vue Notus!
-              </router-link>
+                v-html="text.section.one.text[lang]"
+              ></p>
             </div>
 
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
               <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
               >
                 <img
                   alt="..."
@@ -165,12 +274,10 @@ import Email from "@/components/Email.vue";
                     ></polygon>
                   </svg>
                   <h4 class="text-xl font-bold text-white">
-                    Top Notch Services
+                    {{ text.section.one.image.title[lang] }}
                   </h4>
                   <p class="text-md font-light mt-2 text-white">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
+                    {{ text.section.one.image.text[lang] }}
                   </p>
                 </blockquote>
               </div>
@@ -215,58 +322,12 @@ import Email from "@/components/Email.vue";
                 >
                   <i class="fas fa-rocket text-xl"></i>
                 </div>
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">
+                  {{ text.section.two.title[lang] }}
+                </h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  {{ text.section.two.text[lang] }}
                 </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Amazing page examples</h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -296,60 +357,60 @@ import Email from "@/components/Email.vue";
         <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">
-              <h2 class="text-4xl font-semibold text-white">Build something</h2>
+              <h2 class="text-4xl font-semibold text-white">
+                {{ text.section.three.title[lang] }}
+              </h2>
               <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
-                Put the potentially record low maximum sea ice extent tihs year
-                down to low ice. According to the National Oceanic and
-                Atmospheric Administration, Ted, Scambos.
+                {{ text.section.three.text[lang] }}
               </p>
             </div>
           </div>
-          <div class="flex flex-wrap mt-12 justify-center">
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-medal text-xl"></i>
-              </div>
-              <h6 class="text-xl mt-5 font-semibold text-white">
-                Excelent Services
-              </h6>
-              <p class="mt-2 mb-4 text-blueGray-400">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-poll text-xl"></i>
-              </div>
-              <h5 class="text-xl mt-5 font-semibold text-white">
-                Grow your market
-              </h5>
-              <p class="mt-2 mb-4 text-blueGray-400">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div class="w-full lg:w-3/12 px-4 text-center">
-              <div
-                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
-              >
-                <i class="fas fa-lightbulb text-xl"></i>
-              </div>
-              <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>
-              <p class="mt-2 mb-4 text-blueGray-400">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
+          <!--          <div class="flex flex-wrap mt-12 justify-center">-->
+          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
+          <!--              <div-->
+          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
+          <!--              >-->
+          <!--                <i class="fas fa-medal text-xl"></i>-->
+          <!--              </div>-->
+          <!--              <h6 class="text-xl mt-5 font-semibold text-white">-->
+          <!--                Excelent Services-->
+          <!--              </h6>-->
+          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
+          <!--                Some quick example text to build on the card title and make up-->
+          <!--                the bulk of the card's content.-->
+          <!--              </p>-->
+          <!--            </div>-->
+          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
+          <!--              <div-->
+          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
+          <!--              >-->
+          <!--                <i class="fas fa-poll text-xl"></i>-->
+          <!--              </div>-->
+          <!--              <h5 class="text-xl mt-5 font-semibold text-white">-->
+          <!--                Grow your market-->
+          <!--              </h5>-->
+          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
+          <!--                Some quick example text to build on the card title and make up-->
+          <!--                the bulk of the card's content.-->
+          <!--              </p>-->
+          <!--            </div>-->
+          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
+          <!--              <div-->
+          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
+          <!--              >-->
+          <!--                <i class="fas fa-lightbulb text-xl"></i>-->
+          <!--              </div>-->
+          <!--              <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>-->
+          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
+          <!--                Some quick example text to build on the card title and make up-->
+          <!--                the bulk of the card's content.-->
+          <!--              </p>-->
+          <!--            </div>-->
+          <!--          </div>-->
         </div>
       </section>
-      <email />
+      <email :lang="lang" />
     </main>
-    <footer-component />
+    <footer-component :lang="lang" />
   </div>
 </template>

@@ -1,3 +1,17 @@
+<script setup>
+defineProps({
+  lang: String,
+});
+
+const text = {
+  button: {
+    pt: "Registre-se",
+    en: "Register",
+    es: "Regístrate",
+  },
+};
+</script>
+
 <template>
   <nav
     class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-blueGray-50"
@@ -31,7 +45,8 @@
               class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
               type="button"
             >
-              <i class="fas fa-arrow-alt-circle-down"></i> Register
+              <i class="fas fa-arrow-alt-circle-down"></i>
+              {{ text.button[lang] }}
             </a>
           </li>
         </ul>
@@ -39,17 +54,3 @@
     </div>
   </nav>
 </template>
-<script>
-export default {
-  data() {
-    return {
-      navbarOpen: false,
-    };
-  },
-  methods: {
-    setNavbarOpen: function () {
-      this.navbarOpen = !this.navbarOpen;
-    },
-  },
-};
-</script>

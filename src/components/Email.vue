@@ -6,6 +6,40 @@ import { v4 as uuidv4 } from "uuid";
 import { ref } from "vue";
 import EllipsisLoading from "@/components/EllipsisLoading.vue";
 
+defineProps({
+  lang: String,
+});
+
+const text = ref({
+  email: {
+    title: {
+      pt: "Quer conhecer mais sobre o projeto?",
+      en: "Would you like to learn more about the project?",
+      es: "¿Quieres saber más sobre el proyecto?",
+    },
+    text: {
+      pt: "Registre seu email abaixo e receba uma notificação quando a plataforma estiver disponível",
+      en: "Register your email below and receive a notification when the platform is available",
+      es: "Registra tu correo electrónico a continuación y recibe una notificación cuando la plataforma esté disponible",
+    },
+    input: {
+      pt: "Seu melhor email",
+      en: "Your best email",
+      es: "Tu mejor correo electrónico",
+    },
+    button: {
+      pt: "Registre-se",
+      en: "Register",
+      es: "Regístrate",
+    },
+    success: {
+      pt: "E-mail registrado com sucesso!",
+      en: "Email successfully registered!",
+      es: "Correo electrónico registrado con éxito!",
+    },
+  },
+});
+
 const email = ref();
 const loading = ref(false);
 const saved = ref(false);
@@ -39,17 +73,16 @@ async function save() {
                 <div v-if="!loading">
                   <div v-if="!saved">
                     <h4 class="text-2xl font-semibold">
-                      Want to use when is read?
+                      {{ text.email.title[lang] }}
                     </h4>
                     <p class="leading-relaxed mt-1 mb-4 text-blueGray-500">
-                      Register your email bellow to receive a notification when
-                      you can start use.
+                      {{ text.email.text[lang] }}
                     </p>
                     <div class="relative w-full mb-3 mt-8">
                       <label
                         class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                       >
-                        Your best email
+                        {{ text.email.input[lang] }}
                       </label>
                       <input
                         v-model="email"
@@ -65,13 +98,13 @@ async function save() {
                         class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="submit"
                       >
-                        Register
+                        {{ text.email.button[lang] }}
                       </button>
                     </div>
                   </div>
                   <div v-if="saved">
                     <h4 class="text-2xl font-semibold text-center">
-                      Email saved with success!
+                      {{ text.email.success[lang] }}
                     </h4>
                   </div>
                 </div>
