@@ -9,7 +9,7 @@ if (!["pt", "es", "en"].includes(navLang)) {
   navLang = "en";
 }
 
-navLang = "pt";
+// navLang = "pt";
 
 const lang = ref(navLang);
 const text = ref({
