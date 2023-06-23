@@ -12,10 +12,10 @@ import Email from "@/components/Email.vue";
         class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
       >
         <div class="absolute top-0 w-full h-full bg-center bg-theme">
-          <span
-            id="blackOverlay"
-            class="w-full h-full absolute opacity-75 bg-black"
-          ></span>
+          <!--          <span-->
+          <!--            id="blackOverlay"-->
+          <!--            class="w-full h-full absolute opacity-75 bg-black"-->
+          <!--          ></span>-->
         </div>
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
@@ -193,7 +193,7 @@ import Email from "@/components/Email.vue";
             y="0"
           >
             <polygon
-              class="text-white fill-current"
+              class="text-blueGray-50 bg-gray-50 fill-current"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
