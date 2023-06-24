@@ -14,16 +14,21 @@ body.modal-open {
 
 .bg-theme {
     --tw-bg-opacity: 1;
-    background-color: #1ebbd7;
+    background-color: #1bc7b3;
 }
 
 .active\:bg-theme:active {
     --tw-bg-opacity: 1;
-    background-color: rgba(30, 187, 215, 0.5);
+    background-color: rgba(27, 199, 179, 0.5);
+}
+
+.text-theme {
+    --tw-text-opacity: 1;
+    color: rgba(27, 199, 179, var(--tw-text-opacity));
 }
 
 .color-theme {
-    color: #1ebbd7;
+    color: #1bc7b3;
 }
 
 input.error {

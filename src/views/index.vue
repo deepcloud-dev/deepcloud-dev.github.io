@@ -11,6 +11,8 @@ if (!["pt", "es", "en"].includes(navLang)) {
 
 // navLang = "pt";
 
+import imagePath from "@/assets/img/background_4.png";
+
 const lang = ref(navLang);
 const text = ref({
   hero: {
@@ -132,7 +134,10 @@ const text = ref({
       <div
         class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
       >
-        <div class="absolute top-0 w-full h-full bg-center bg-theme">
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-cover"
+          :style="{ backgroundImage: `url(${imagePath})` }"
+        >
           <!--          <span-->
           <!--            id="blackOverlay"-->
           <!--            class="w-full h-full absolute opacity-75 bg-black"-->
@@ -141,7 +146,7 @@ const text = ref({
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
-              <div class="pr-12">
+              <div>
                 <h1 class="text-white font-semibold text-5xl">
                   {{ text.hero.title[lang] }}
                 </h1>
@@ -188,7 +193,7 @@ const text = ref({
                   <h6 class="text-xl font-semibold">
                     {{ text.card.one.title[lang] }}
                   </h6>
-                  <p class="mt-2 mb-4 text-blueGray-500">
+                  <p class="mt-2 mb-4 text-blueGray-500 text-justify">
                     {{ text.card.one.text[lang] }}
                   </p>
                 </div>
@@ -208,14 +213,14 @@ const text = ref({
                   <h6 class="text-xl font-semibold">
                     {{ text.card.two.title[lang] }}
                   </h6>
-                  <p class="mt-2 mb-4 text-blueGray-500">
+                  <p class="mt-2 mb-4 text-blueGray-500 text-justify">
                     {{ text.card.two.text[lang] }}
                   </p>
                 </div>
               </div>
             </div>
 
-            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+            <div class="lg:pt-6 w-full md:w-4/12 px-4 text-center">
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
               >
@@ -228,7 +233,7 @@ const text = ref({
                   <h6 class="text-xl font-semibold">
                     {{ text.card.three.title[lang] }}
                   </h6>
-                  <p class="mt-2 mb-4 text-blueGray-500">
+                  <p class="mt-2 mb-4 text-blueGray-500 text-justify">
                     {{ text.card.three.text[lang] }}
                   </p>
                 </div>
@@ -247,18 +252,18 @@ const text = ref({
                 {{ text.section.one.title[lang] }}
               </h3>
               <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600"
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600 text-justify"
                 v-html="text.section.one.text[lang]"
               ></p>
             </div>
 
             <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
               <div
-                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-emerald-500"
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-theme"
               >
                 <img
                   alt="..."
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                  src="@/assets/img/7.png"
                   class="w-full align-middle rounded-t-lg"
                 />
                 <blockquote class="relative p-8 mb-4">
@@ -270,13 +275,13 @@ const text = ref({
                   >
                     <polygon
                       points="-30,95 583,95 583,65"
-                      class="text-emerald-500 fill-current"
+                      class="text-theme fill-current"
                     ></polygon>
                   </svg>
                   <h4 class="text-xl font-bold text-white">
                     {{ text.section.one.image.title[lang] }}
                   </h4>
-                  <p class="text-md font-light mt-2 text-white">
+                  <p class="text-md font-light mt-2 text-white text-justify">
                     {{ text.section.one.image.text[lang] }}
                   </p>
                 </blockquote>
@@ -312,20 +317,22 @@ const text = ref({
               <img
                 alt="..."
                 class="max-w-full rounded-lg shadow-lg"
-                src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                src="@/assets/img/18.png"
               />
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
                 <div
-                  class="text-emerald-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-300"
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-400"
                 >
                   <i class="fas fa-rocket text-xl"></i>
                 </div>
                 <h3 class="text-3xl font-semibold">
                   {{ text.section.two.title[lang] }}
                 </h3>
-                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                <p
+                  class="mt-4 text-lg leading-relaxed text-blueGray-500 text-justify"
+                >
                   {{ text.section.two.text[lang] }}
                 </p>
               </div>
@@ -334,7 +341,7 @@ const text = ref({
         </div>
       </section>
 
-      <section id="register" class="pb-20 relative block bg-blueGray-800">
+      <section id="register" class="pb-20 relative block bg-theme">
         <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style="transform: translateZ(0)"
@@ -348,7 +355,7 @@ const text = ref({
             y="0"
           >
             <polygon
-              class="text-blueGray-800 fill-current"
+              class="text-theme fill-current"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
@@ -360,7 +367,7 @@ const text = ref({
               <h2 class="text-4xl font-semibold text-white">
                 {{ text.section.three.title[lang] }}
               </h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-400">
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-100">
                 {{ text.section.three.text[lang] }}
               </p>
             </div>

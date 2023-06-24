@@ -60,7 +60,7 @@ async function save() {
 </script>
 
 <template>
-  <section class="relative block py-24 lg:pt-0 bg-blueGray-800">
+  <section class="relative block py-24 lg:pt-0 bg-theme">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
         <div class="w-full lg:w-6/12 px-4">
@@ -95,7 +95,7 @@ async function save() {
 
                     <div class="text-center mt-6">
                       <button
-                        class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        class="bg-theme text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="submit"
                       >
                         {{ text.email.button[lang] }}
