@@ -74,15 +74,15 @@ const text = ref({
       },
       text: {
         pt:
-          "A plataforma Deep Cloud capacita empreendedores e startups a criarem suas infraestruturas em nuvem de forma rápida e eficiente. " +
+          "A plataforma Deep Cloud capacita empreendedores e Startups a criarem suas infraestruturas em nuvem de forma rápida e eficiente. " +
           "<br><br>" +
           "A eliminação das barreiras técnicas e a simplificação do processo de configuração permitem que arquiteturas personalizadas sejam construídas por qualquer pessoa, sem a necessidade de conhecimentos especializados em infraestrutura e segurança.",
         en:
-          "The Deep Cloud platform empowers entrepreneurs and startups to quickly and efficiently build their cloud infrastructures." +
+          "The Deep Cloud platform empowers entrepreneurs and Startups to quickly and efficiently build their cloud infrastructures." +
           "<br><br>" +
           "Eliminating technical barriers and simplifying the configuration process allows custom architectures to be built by anyone, without the need for specialized infrastructure and security knowledge.",
         es:
-          "La plataforma Deep Cloud empodera a los empresarios y empresas emergentes para que construyan de manera rápida y eficiente sus infraestructuras en la nube" +
+          "La plataforma Deep Cloud empodera a los empresarios y Startups para que construyan de manera rápida y eficiente sus infraestructuras en la nube" +
           "<br><br>" +
           "La eliminación de las barreras técnicas y la simplificación del proceso de configuración permiten que cualquier persona construya arquitecturas personalizadas, sin necesidad de infraestructura especializada ni conocimientos de seguridad",
       },
@@ -118,9 +118,9 @@ const text = ref({
         es: "Desafíe los límites de la innovación en la nube",
       },
       text: {
-        pt: "Descubra como a Deep Cloud pode transformar sua visão em uma arquitetura perfeita, eliminando barreiras técnicas, simplificando a configuração e oferecendo eficiência, segurança e escalabilidade. Conheça a chave para impulsionar seu negócio",
-        en: "Discover how the Deep Cloud can transform your vision into a seamless architecture, removing technical barriers, simplifying configuration, and delivering efficiency, security, and scalability. Know the key to boost your business",
-        es: "Descubra cómo Deep Cloud puede transformar su visión en una arquitectura perfecta, eliminando barreras técnicas, simplificando la configuración y brindando eficiencia, seguridad y escalabilidad. Conoce la clave para impulsar tu negocio",
+        pt: "Descubra como a Deep Cloud pode transformar sua visão em uma arquitetura perfeita, eliminando barreiras técnicas, simplificando a configuração e oferecendo eficiência, segurança e escalabilidade. <br>Conheça a chave para impulsionar seu negócio.",
+        en: "Discover how the Deep Cloud can transform your vision into a seamless architecture, removing technical barriers, simplifying configuration, and delivering efficiency, security, and scalability. <br>Know the key to boost your business.",
+        es: "Descubra cómo Deep Cloud puede transformar su visión en una arquitectura perfecta, eliminando barreras técnicas, simplificando la configuración y brindando eficiencia, seguridad y escalabilidad. <br>Conoce la clave para impulsar tu negocio.",
       },
     },
   },
@@ -132,17 +132,12 @@ const text = ref({
     <navbar :lang="lang" />
     <main>
       <div
-        class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75"
+        class="relative pt-36 pb-32 flex content-center items-center justify-center min-h-screen-75"
       >
         <div
           class="absolute top-0 w-full h-full bg-center bg-cover"
           :style="{ backgroundImage: `url(${imagePath})` }"
-        >
-          <!--          <span-->
-          <!--            id="blackOverlay"-->
-          <!--            class="w-full h-full absolute opacity-75 bg-black"-->
-          <!--          ></span>-->
-        </div>
+        ></div>
         <div class="container relative mx-auto">
           <div class="items-center flex flex-wrap">
             <div class="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
@@ -150,7 +145,7 @@ const text = ref({
                 <h1 class="text-white font-semibold text-5xl">
                   {{ text.hero.title[lang] }}
                 </h1>
-                <p class="mt-4 text-lg text-blueGray-200">
+                <p class="mt-4 text-lg text-blueGray-50">
                   {{ text.hero.text[lang] }}
                 </p>
               </div>
@@ -188,7 +183,7 @@ const text = ref({
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
                   >
-                    <i class="fas fa-award"></i>
+                    <i class="fa-solid fa-cloud"></i>
                   </div>
                   <h6 class="text-xl font-semibold">
                     {{ text.card.one.title[lang] }}
@@ -208,7 +203,7 @@ const text = ref({
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-lightBlue-400"
                   >
-                    <i class="fas fa-retweet"></i>
+                    <i class="fa-solid fa-gear"></i>
                   </div>
                   <h6 class="text-xl font-semibold">
                     {{ text.card.two.title[lang] }}
@@ -228,7 +223,7 @@ const text = ref({
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400"
                   >
-                    <i class="fas fa-fingerprint"></i>
+                    <i class="fa-solid fa-right-left"></i>
                   </div>
                   <h6 class="text-xl font-semibold">
                     {{ text.card.three.title[lang] }}
@@ -246,7 +241,7 @@ const text = ref({
               <div
                 class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white"
               >
-                <i class="fas fa-user-friends text-xl"></i>
+                <i class="fa-brands fa-medapps text-2xl"></i>
               </div>
               <h3 class="text-3xl mb-2 font-semibold leading-normal">
                 {{ text.section.one.title[lang] }}
@@ -321,7 +316,7 @@ const text = ref({
               />
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
+              <div class="pt-12 md:pt-0">
                 <div
                   class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-emerald-400"
                 >
@@ -367,53 +362,12 @@ const text = ref({
               <h2 class="text-4xl font-semibold text-white">
                 {{ text.section.three.title[lang] }}
               </h2>
-              <p class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-100">
-                {{ text.section.three.text[lang] }}
-              </p>
+              <p
+                class="text-lg leading-relaxed mt-4 mb-4 text-blueGray-100"
+                v-html="text.section.three.text[lang]"
+              ></p>
             </div>
           </div>
-          <!--          <div class="flex flex-wrap mt-12 justify-center">-->
-          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
-          <!--              <div-->
-          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
-          <!--              >-->
-          <!--                <i class="fas fa-medal text-xl"></i>-->
-          <!--              </div>-->
-          <!--              <h6 class="text-xl mt-5 font-semibold text-white">-->
-          <!--                Excelent Services-->
-          <!--              </h6>-->
-          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
-          <!--                Some quick example text to build on the card title and make up-->
-          <!--                the bulk of the card's content.-->
-          <!--              </p>-->
-          <!--            </div>-->
-          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
-          <!--              <div-->
-          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
-          <!--              >-->
-          <!--                <i class="fas fa-poll text-xl"></i>-->
-          <!--              </div>-->
-          <!--              <h5 class="text-xl mt-5 font-semibold text-white">-->
-          <!--                Grow your market-->
-          <!--              </h5>-->
-          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
-          <!--                Some quick example text to build on the card title and make up-->
-          <!--                the bulk of the card's content.-->
-          <!--              </p>-->
-          <!--            </div>-->
-          <!--            <div class="w-full lg:w-3/12 px-4 text-center">-->
-          <!--              <div-->
-          <!--                class="text-blueGray-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"-->
-          <!--              >-->
-          <!--                <i class="fas fa-lightbulb text-xl"></i>-->
-          <!--              </div>-->
-          <!--              <h5 class="text-xl mt-5 font-semibold text-white">Launch time</h5>-->
-          <!--              <p class="mt-2 mb-4 text-blueGray-400">-->
-          <!--                Some quick example text to build on the card title and make up-->
-          <!--                the bulk of the card's content.-->
-          <!--              </p>-->
-          <!--            </div>-->
-          <!--          </div>-->
         </div>
       </section>
       <email :lang="lang" />
