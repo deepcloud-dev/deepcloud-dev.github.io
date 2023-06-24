@@ -336,7 +336,7 @@ const text = ref({
         </div>
       </section>
 
-      <section id="register" class="pb-20 relative block bg-theme">
+      <section id="register" class="pb-28 relative block bg-theme">
         <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style="transform: translateZ(0)"
@@ -356,7 +356,7 @@ const text = ref({
           </svg>
         </div>
 
-        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+        <div class="container mx-auto px-4 pt-20 lg:pt-24 lg:pb-48">
           <div class="flex flex-wrap text-center justify-center">
             <div class="w-full lg:w-6/12 px-4">
               <h2 class="text-4xl font-semibold text-white">
