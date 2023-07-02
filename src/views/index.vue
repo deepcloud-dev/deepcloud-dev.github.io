@@ -9,7 +9,11 @@ if (!["pt", "es", "en"].includes(navLang)) {
   navLang = "en";
 }
 
-// navLang = "pt";
+const href_lang = window.location.href.split("/").pop().split("-")[0];
+
+if (["pt", "es", "en"].includes(href_lang)) {
+  navLang = href_lang;
+}
 
 import imagePath from "@/assets/img/background_4.png";
 
