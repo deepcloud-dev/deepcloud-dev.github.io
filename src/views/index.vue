@@ -17,32 +17,32 @@ const lang = ref(navLang);
 const text = ref({
   hero: {
     title: {
-      pt: "Sua jornada de nuvem começa com a Deep Cloud",
+      pt: "Sua jornada na nuvem começa com a Deep Cloud",
       en: "Your cloud journey begins with Deep Cloud",
       es: "Tu viaje en la nube comienza con Deep Cloud",
     },
     text: {
-      pt: "Transforme sua visão em uma arquitetura em nuvem perfeita com facilidade, enquanto lidamos com as complexidades. Sua história começa aqui.",
-      en: "Transform your vision into a perfect cloud architecture with ease, while we handle the complexities. Your story starts here.",
-      es: "Transforma tu visión en una arquitectura en la nube perfecta con facilidad, mientras nosotros nos encargamos de las complejidades. Tu historia comienza aquí.",
+      pt: "Transforme sua visão em uma arquitetura em nuvem perfeita com facilidade, enquanto lidamos com as complexidades. Conecte sua conta da cloud provider enquanto cuidaremos do resto.",
+      en: "Transform your vision into a perfect cloud architecture with ease, while we handle the complexities. Connect your cloud provider account while we take care of the rest.",
+      es: "Transforme su visión en una arquitectura de nube perfecta con facilidad, mientras nosotros manejamos las complejidades. Conecte su cuenta de proveedor de nube mientras nosotros nos encargamos del resto.",
     },
   },
   card: {
     one: {
       title: {
-        pt: "Criação de arquiteturas em nuvem simplificada",
-        en: "Simplified cloud architecture creation",
-        es: "Creación simplificada de arquitecturas en la nube",
+        pt: "Criação de arquiteturas em nuvem",
+        en: "Creating cloud architectures",
+        es: "Creación de arquitecturas en la nube",
       },
       text: {
-        pt: "Barreiras técnicas são eliminadas e a configuração de infraestrutura se torna acessível a todos. A plataforma intuitiva permite a criação de arquiteturas personalizadas com apenas alguns cliques, sem necessidade de conhecimentos especializados.",
-        en: "Technical barriers are eliminated, and infrastructure configuration becomes accessible to everyone. The intuitive platform enables the creation of customized architectures with just a few clicks, without the need for specialized knowledge.",
-        es: "Se eliminan las barreras técnicas y la configuración de infraestructura se vuelve accesible para todos. La plataforma intuitiva permite la creación de arquitecturas personalizadas con solo unos pocos clics, sin necesidad de conocimientos especializados.",
+        pt: "Barreiras técnicas são eliminadas e a configuração da uma infraestrutura se torna acessível a todos. A plataforma intuitiva permite a criação de arquiteturas personalizadas com apenas alguns cliques, sem necessidade de conhecimentos aprofundados.",
+        en: "Technical barriers are eliminated and the configuration of an infrastructure becomes accessible to everyone. The intuitive platform allows the creation of custom architectures with just a few clicks, without the need for in-depth knowledge.",
+        es: "Se eliminan las barreras técnicas y la configuración de una infraestructura se vuelve accesible para todos. La plataforma intuitiva permite la creación de arquitecturas personalizadas con solo unos pocos clics, sin necesidad de conocimientos profundos.",
       },
     },
     two: {
       title: {
-        pt: "Melhoria na eficiência e segurança ",
+        pt: "Melhoria na eficiência e segurança",
         en: "Improved efficiency and security",
         es: "Mejora en eficiencia y seguridad",
       },
@@ -54,37 +54,37 @@ const text = ref({
     },
     three: {
       title: {
-        pt: "Promoção de escalabilidade e flexibilidade",
-        en: "Promotion of scalability and flexibility",
-        es: "Promoción de escalabilidad y flexibilidad",
+        pt: "Escalabilidade e flexibilidade",
+        en: "Scalability and flexibility",
+        es: "Escalabilidad y flexibilidad",
       },
       text: {
-        pt: "A solução se adapta às constantes necessidades dos negócios, fornecendo uma base sólida que pode acompanhar o crescimento e a demanda. Com a Deep Cloud, é possível expandir o negócio de forma ágil e eficiente.",
-        en: "The solution adapts to the ever-changing needs of businesses, providing a solid foundation that can keep up with growth and demand. With Deep Cloud, it is possible to expand the business swiftly and efficiently.",
-        es: "La solución se adapta a las necesidades cambiantes de los negocios, brindando una base sólida que puede acompañar el crecimiento y la demanda. Con Deep Cloud, es posible expandir el negocio de manera ágil y eficiente.",
+        pt: "A solução se adapta às constantes necessidades do seu negócio, fornecendo uma base sólida que pode acompanhar o seu crescimento e a sua demanda. Com a Deep Cloud, é possível expandir o negócio de forma ágil e eficiente.",
+        en: "The solution adapts to the constant needs of your business, providing a solid foundation that can keep up with your growth and demand. With the Deep Cloud, it is possible to expand the business in an agile and efficient way.",
+        es: "La solución se adapta a las necesidades constantes de su negocio, brindando una base sólida que puede mantenerse al día con su crecimiento y demanda. Con Deep Cloud es posible expandir el negocio de manera ágil y eficiente.",
       },
     },
   },
   section: {
     one: {
       title: {
-        pt: "Liberdade para construir arquiteturas em nuvem personalizadas, sem barreiras técnicas",
-        en: "Freedom to build custom cloud architectures without technical barriers",
-        es: "Libertad para construir arquitecturas de nube personalizadas sin barreras técnicas",
+        pt: "Liberdade para construir a sua arquitetura sem barreiras técnicas",
+        en: "Freedom to build your architecture without technical barriers",
+        es: "Libertad para construir tu arquitectura sin barreras técnicas",
       },
       text: {
         pt:
-          "A plataforma Deep Cloud capacita empreendedores e Startups a criarem suas infraestruturas em nuvem de forma rápida e eficiente. " +
+          "A plataforma Deep Cloud capacita equipes, empreendedores e Startups a criarem suas infraestruturas em nuvem de forma rápida e eficiente." +
           "<br><br>" +
-          "A eliminação das barreiras técnicas e a simplificação do processo de configuração permitem que arquiteturas personalizadas sejam construídas por qualquer pessoa, sem a necessidade de conhecimentos especializados em infraestrutura e segurança.",
+          "A eliminação das barreiras técnicas e a simplificação do processo de configuração permitem que arquiteturas personalizadas sejam construídas por qualquer pessoa, sem a necessidade de conhecimentos especializados em infraestrutura e cloud.",
         en:
-          "The Deep Cloud platform empowers entrepreneurs and Startups to quickly and efficiently build their cloud infrastructures." +
+          "The Deep Cloud platform empowers teams, entrepreneurs and Startups to quickly and efficiently build their cloud infrastructures." +
           "<br><br>" +
-          "Eliminating technical barriers and simplifying the configuration process allows custom architectures to be built by anyone, without the need for specialized infrastructure and security knowledge.",
+          "Removing technical barriers and simplifying the configuration process allows custom architectures to be built by anyone, without the need for specialized infrastructure and cloud knowledge.",
         es:
-          "La plataforma Deep Cloud empodera a los empresarios y Startups para que construyan de manera rápida y eficiente sus infraestructuras en la nube" +
+          "La plataforma Deep Cloud empodera a equipos, emprendedores y Startups para construir de manera rápida y eficiente sus infraestructuras en la nube." +
           "<br><br>" +
-          "La eliminación de las barreras técnicas y la simplificación del proceso de configuración permiten que cualquier persona construya arquitecturas personalizadas, sin necesidad de infraestructura especializada ni conocimientos de seguridad",
+          "Eliminar las barreras técnicas y simplificar el proceso de configuración permite que cualquier persona construya arquitecturas personalizadas, sin necesidad de infraestructura especializada ni conocimientos de la nube.",
       },
       image: {
         title: {
@@ -93,9 +93,9 @@ const text = ref({
           es: "Nuestra visión",
         },
         text: {
-          pt: "Nossa visão é revolucionar a forma como as empresas constroem suas arquiteturas em nuvem, oferecendo uma plataforma unificada e intuitiva que simplifica e otimiza o processo de configuração",
-          en: "Our vision is to revolutionize the way companies build their cloud architectures by offering a unified and intuitive platform that simplifies and streamlines the configuration process",
-          es: "Nuestra visión es revolucionar la forma en que las empresas construyen sus arquitecturas en la nube ofreciendo una plataforma unificada e intuitiva que simplifica y agiliza el proceso de configuración",
+          pt: "Nossa visão é revolucionar a forma como as empresas constroem suas arquiteturas em nuvem, oferecendo uma plataforma unificada e intuitiva que simplifica e otimiza o processo de configuração.",
+          en: "Our vision is to revolutionize the way companies build their cloud architectures by offering a unified and intuitive platform that simplifies and streamlines the configuration process.",
+          es: "Nuestra visión es revolucionar la forma en que las empresas construyen sus arquitecturas en la nube ofreciendo una plataforma unificada e intuitiva que simplifica y agiliza el proceso de configuración.",
         },
       },
     },
@@ -106,9 +106,9 @@ const text = ref({
         es: "Una idea innovadora y en crecimiento",
       },
       text: {
-        pt: "Através da Deep Cloud, é possível selecionar provedores de nuvem desejados, como AWS e GCP, e configurar arquiteturas de forma intuitiva",
-        en: "Through the Deep Cloud, it is possible to select desired cloud providers, such as AWS and GCP, and intuitively configure architectures",
-        es: "A través de Deep Cloud, es posible seleccionar los proveedores de nube deseados, como AWS y GCP, y configurar arquitecturas de manera intuitiva",
+        pt: "A Deep Cloud está em fase de desenvolvimento e testes. <br><br>Assim que estiver disponível, será possível, em poucos cliques, configurar uma nova arquitetura 100% segura e escalável, do jeito que seu projeto precisa.<br><br>Traga a sua ideia para a Deep Cloud e cresça com a gente.",
+        en: "Deep Cloud is in the development and testing phase. <br><br>As soon as it is available, it will be possible, in a few clicks, to configure a new 100% secure and scalable architecture, the way your project needs.<br><br>Bring your idea to the Deep Cloud and grow with us.",
+        es: "Deep Cloud se encuentra en fase de desarrollo y pruebas. <br><br>En cuanto esté disponible, será posible, en unos pocos clics, configurar una nueva arquitectura 100% segura y escalable, de la forma que tu proyecto necesita.<br><br>Lleva tu idea a la Nube Profunda y crece con nosotros.",
       },
     },
     three: {
@@ -118,9 +118,9 @@ const text = ref({
         es: "Desafíe los límites de la innovación en la nube",
       },
       text: {
-        pt: "Descubra como a Deep Cloud pode transformar sua visão em uma arquitetura perfeita, eliminando barreiras técnicas, simplificando a configuração e oferecendo eficiência, segurança e escalabilidade. <br>Conheça a chave para impulsionar seu negócio.",
-        en: "Discover how the Deep Cloud can transform your vision into a seamless architecture, removing technical barriers, simplifying configuration, and delivering efficiency, security, and scalability. <br>Know the key to boost your business.",
-        es: "Descubra cómo Deep Cloud puede transformar su visión en una arquitectura perfecta, eliminando barreras técnicas, simplificando la configuración y brindando eficiencia, seguridad y escalabilidad. <br>Conoce la clave para impulsar tu negocio.",
+        pt: "Descubra como a Deep Cloud pode transformar sua visão em uma arquitetura perfeita, eliminando barreiras técnicas, simplificando a configuração e oferecendo eficiência, segurança e escalabilidade. <br><br>Conheça a chave para impulsionar seu negócio.",
+        en: "Discover how the Deep Cloud can transform your vision into a seamless architecture, removing technical barriers, simplifying configuration, and delivering efficiency, security, and scalability. <br><br>Know the key to boost your business.",
+        es: "Descubra cómo Deep Cloud puede transformar su visión en una arquitectura perfecta, eliminando barreras técnicas, simplificando la configuración y brindando eficiencia, seguridad y escalabilidad. <br><br>Conoce las claves para impulsar tu negocio.",
       },
     },
   },
@@ -327,9 +327,8 @@ const text = ref({
                 </h3>
                 <p
                   class="mt-4 text-lg leading-relaxed text-blueGray-500 text-justify"
-                >
-                  {{ text.section.two.text[lang] }}
-                </p>
+                  v-html="text.section.two.text[lang]"
+                ></p>
               </div>
             </div>
           </div>
