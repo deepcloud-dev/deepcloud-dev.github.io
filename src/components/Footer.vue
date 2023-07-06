@@ -80,7 +80,7 @@ const text = ref({
                 <i class="fab fa-github"></i>
               </button>
             </a>
-            <a href="mailto:deepcloud.dev@gmail.com">
+            <a href="mailto:contact@deepcloud.dev">
               <button
                 class="bg-white text-blueGray-800 shadow-sm font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                 type="button"
@@ -136,7 +136,7 @@ const text = ref({
                 <li>
                   <a
                     class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                    href="mailto:deepcloud.dev@gmail.com"
+                    href="mailto:contact@deepcloud.dev"
                   >
                     {{ text.links.contact[lang] }}
                   </a>
